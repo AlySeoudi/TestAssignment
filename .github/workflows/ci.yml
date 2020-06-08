@@ -11,6 +11,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - name: instal dep
+      run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Test
